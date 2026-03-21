@@ -10,7 +10,7 @@ from kog.core.config import config
 
 class ContextManager:
     def __init__(self):
-        self.embeddings = OllamaEmbeddings(model="qwen2.5:3b")
+        self.embeddings = OllamaEmbeddings(model="qwen3-embedding:4b")
         self.collection_name = "kog_contexts"
         self.vectorstore = Chroma(
             collection_name=self.collection_name,
