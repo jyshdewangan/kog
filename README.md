@@ -79,10 +79,5 @@ Contexts are documents or files that have been parsed and embedded into ChromaDB
 
 ---
 
-## 🏗 Architecture Details
-Kog persists state natively in your user home directory: `~/.kog/`.
-- `~/.kog/sessions.json`: Contains routing identifiers assigning context pointers to specific workspaces.
-- `~/.kog/contexts.json`: Metadata map mapping file sources to context pointer names.
-- `~/.kog/chroma/`: The native ChromaDB embedded vector directory. 
 
 
