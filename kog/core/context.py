@@ -15,7 +15,13 @@ class ContextManager:
         self.vectorstore = Chroma(
             collection_name=self.collection_name,
             embedding_function=self.embeddings,
-            persist_directory=str(config.chroma_dir)
+            persist_directory=str(config.chroma_dir),
+            collection_metadata={
+                "hnsw:space": "cosine",
+                "hnsw:construction_ef": 200,
+                "hnsw:M": 32,
+                "hnsw:search_ef": 100
+            }
         )
         self.contexts_file = config.contexts_file
 
